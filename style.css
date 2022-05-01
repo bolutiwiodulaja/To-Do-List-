@@ -1,0 +1,21 @@
+body {
+  background-color:aqua;
+}
+
+table {
+  width: 50%;
+}
+
+input {
+  margin-top: 40px;
+  border: 1px solid blue;
+  border-radius: 30px;
+}
+
+button {
+  border-radius: 30px;
+}
+
+.addItem {
+  margin-right: 20px;
+}
