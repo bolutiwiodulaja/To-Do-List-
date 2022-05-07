@@ -19,3 +19,13 @@ button {
 .addItem {
   margin-right: 20px;
 }
+
+.mark-complete {
+  margin-left: -40px;
+  margin-top: 0px;
+}
+
+.prompt {
+  font-weight: bold;
+  font-size: 20px;
+}

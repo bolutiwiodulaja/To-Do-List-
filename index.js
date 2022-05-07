@@ -63,6 +63,20 @@
       }
     });
   }
+
+  var markTaskActive = function (id) {
+    $.ajax({
+   type: 'PUT',
+      url: 'https://altcademy-to-do-list-api.herokuapp.com/tasks/' + id + '/mark_active?api_key=352',
+      dataType: 'json',
+      success: function (response, textStatus) {
+        getAndDisplayAllTasks();
+      },
+      error: function (request, textStatus, errorMessage) {
+        console.log(errorMessage);
+      }
+    });
+  }
   
   $('#newTask').on('submit', function (e) {
     e.preventDefault();
@@ -76,6 +90,14 @@
   $(document).on('change', '.mark-complete', function () {
     if (this.checked) {
        markTaskComplete($(this).data('id'));
+     }
+   });
+
+   $(document).on('change', '.mark-complete', function () {
+    if (this.checked) {
+       markTaskComplete($(this).data('id'));
+     } else {
+       markTaskActive($(this).data('id'));
      }
    });
   
